@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.11.1 on win32)" generated="20230706 14:42:47.664" rpa="false" schemaversion="3">
+<suite id="s1" name="Form" source="C:\Users\santhosh.kumar\PycharmProjects\RobotFrameworkPractice\TestCases\Form.robot">
+<kw name="LaunchBrowser" library="CommonUtils" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${ur}</arg>
+<arg>${bro}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230706 14:42:47.943" level="INFO">Opening browser 'chrome' to base url 'file:///C:/Users/santhosh.kumar/Documents/HTML/form.html'.</msg>
+<status status="PASS" starttime="20230706 14:42:47.943" endtime="20230706 14:42:51.088"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230706 14:42:51.088" endtime="20230706 14:42:51.204"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230706 14:42:51.204" endtime="20230706 14:42:51.204"/>
+</kw>
+<status status="PASS" starttime="20230706 14:42:47.943" endtime="20230706 14:42:51.204"/>
+</kw>
+<test id="s1-t1" name="Fill" line="22">
+<kw name="Filling the Form">
+<arg>${firstname}</arg>
+<arg>${midname}</arg>
+<kw name="Enter FirstName" library="FormKeywords">
+<arg>${firstname}</arg>
+<kw name="Highlight Element" library="CommonUtils">
+<arg>${name}</arg>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${ele}</var>
+<arg>${webele}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230706 14:42:52.228" level="INFO">${ele} = &lt;selenium.webdriver.remote.webelement.WebElement (session="005e279f497d2437e4a643cb2f0449cd", element="A46C85C3C8BECE19D4970A45A06D46C2_element_2")&gt;</msg>
+<status status="PASS" starttime="20230706 14:42:51.204" endtime="20230706 14:42:52.228"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>arguments[0].setAttribute('style', 'border: 4px solid green');</arg>
+<arg>ARGUMENTS</arg>
+<arg>${ele}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230706 14:42:52.228" level="INFO">Executing JavaScript:
+arguments[0].setAttribute('style', 'border: 4px solid green');
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="005e279f497d2437e4a643cb2f0449cd", element="A46C85C3C8BECE19D4970A45A06D46C2_element_2")&gt;'</msg>
+<status status="PASS" starttime="20230706 14:42:52.228" endtime="20230706 14:42:53.265"/>
+</kw>
+<status status="PASS" starttime="20230706 14:42:51.204" endtime="20230706 14:42:53.265"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${name}</arg>
+<arg>${Fn}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 14:42:53.265" level="INFO">Typing text 'santhosh' into text field 'name:firstname'.</msg>
+<status status="PASS" starttime="20230706 14:42:53.265" endtime="20230706 14:42:56.405"/>
+</kw>
+<status status="PASS" starttime="20230706 14:42:51.204" endtime="20230706 14:42:56.405"/>
+</kw>
+<kw name="Enter MidName" library="FormKeywords">
+<arg>${midname}</arg>
+<kw name="Highlight Element" library="CommonUtils">
+<arg>${mname}</arg>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${ele}</var>
+<arg>${webele}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230706 14:42:57.430" level="INFO">${ele} = &lt;selenium.webdriver.remote.webelement.WebElement (session="005e279f497d2437e4a643cb2f0449cd", element="A46C85C3C8BECE19D4970A45A06D46C2_element_4")&gt;</msg>
+<status status="PASS" starttime="20230706 14:42:56.406" endtime="20230706 14:42:57.430"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>arguments[0].setAttribute('style', 'border: 4px solid green');</arg>
+<arg>ARGUMENTS</arg>
+<arg>${ele}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230706 14:42:57.430" level="INFO">Executing JavaScript:
+arguments[0].setAttribute('style', 'border: 4px solid green');
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="005e279f497d2437e4a643cb2f0449cd", element="A46C85C3C8BECE19D4970A45A06D46C2_element_4")&gt;'</msg>
+<status status="PASS" starttime="20230706 14:42:57.430" endtime="20230706 14:42:58.443"/>
+</kw>
+<status status="PASS" starttime="20230706 14:42:56.406" endtime="20230706 14:42:58.443"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${mname}</arg>
+<arg>${Fn}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230706 14:42:58.443" level="INFO">Typing text 'kumar' into text field 'name:middlename'.</msg>
+<status status="PASS" starttime="20230706 14:42:58.443" endtime="20230706 14:43:01.733"/>
+</kw>
+<status status="PASS" starttime="20230706 14:42:56.405" endtime="20230706 14:43:01.733"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${firstname}</arg>
+<arg>santhosh</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20230706 14:43:01.733" endtime="20230706 14:43:01.733"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${midname}&quot; == &quot;kumar&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>TRUE</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 14:43:01.733" endtime="20230706 14:43:01.733"/>
+</kw>
+<status status="PASS" starttime="20230706 14:43:01.733" endtime="20230706 14:43:01.733"/>
+</branch>
+<status status="PASS" starttime="20230706 14:43:01.733" endtime="20230706 14:43:01.733"/>
+</if>
+<kw name="Hello World" library="wel">
+<msg timestamp="20230706 14:43:01.741" level="INFO">HELLO WORLD</msg>
+<status status="PASS" starttime="20230706 14:43:01.733" endtime="20230706 14:43:01.741"/>
+</kw>
+<kw name="Hello" library="wel">
+<status status="PASS" starttime="20230706 14:43:01.741" endtime="20230706 14:43:01.743"/>
+</kw>
+<status status="PASS" starttime="20230706 14:42:51.204" endtime="20230706 14:43:01.744"/>
+</kw>
+<status status="PASS" starttime="20230706 14:42:51.204" endtime="20230706 14:43:01.745"/>
+</test>
+<kw name="close" library="CommonUtils" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230706 14:43:01.745" endtime="20230706 14:43:04.964"/>
+</kw>
+<status status="PASS" starttime="20230706 14:43:01.745" endtime="20230706 14:43:04.964"/>
+</kw>
+<status status="PASS" starttime="20230706 14:42:47.666" endtime="20230706 14:43:04.964"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Form">Form</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

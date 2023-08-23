@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.11.1 on win32)" generated="20230731 11:03:30.487" rpa="false" schemaversion="3">
+<suite id="s1" name="chromeTest" source="C:\Users\santhosh.kumar\PycharmProjects\Andriod_Appium_Project\Tests\chromeTest.robot">
+<test id="s1-t1" name="Open Browser in Mobile" line="10">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>browserName=${browserName}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20230731 11:03:46.652" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20230731 11:03:46.652" endtime="20230731 11:03:46.713"/>
+</kw>
+<msg timestamp="20230731 11:03:46.713" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20230731 11:03:46.713" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: A new session could not be created. Details: session not created: This version of ChromeDriver only supports Chrome version 113
+Current browser version is 115.0.5790.138 with package name com.android.chrome
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: A new session could not be created. Details: session not created: This version of ChromeDriver only supports Chrome version 113
+Current browser version is 115.0.5790.138 with package name com.android.chrome
+    at getResponseForW3CError (C:\Users\santhosh.kumar\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Users\santhosh.kumar\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:380:37)</msg>
+<status status="FAIL" starttime="20230731 11:03:31.031" endtime="20230731 11:03:46.722"/>
+</kw>
+<kw name="Go To Url" library="AppiumLibrary">
+<arg>${webURL}</arg>
+<doc>Opens URL in default web browser.</doc>
+<status status="NOT RUN" starttime="20230731 11:03:46.722" endtime="20230731 11:03:46.722"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>APPLICATION LAUNCHED SUCESSFULLY</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230731 11:03:46.722" endtime="20230731 11:03:46.722"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>css=input.form-control.loginUserInput.polyfillplaceholder</arg>
+<arg>Testuser03</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230731 11:03:46.722" endtime="20230731 11:03:46.722"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>css=input.form-control.polyfillplaceholder.loginPassword</arg>
+<arg>Testing03!</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230731 11:03:46.727" endtime="20230731 11:03:46.727"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>css=button.btn.btn-primary.btn-lg.primary.login.m-btn</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230731 11:03:46.727" endtime="20230731 11:03:46.727"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>css=input.form-control.loginUserInput.polyfillplaceholder</arg>
+<arg>Testuser03</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230731 11:03:46.727" endtime="20230731 11:03:46.727"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>css=input.form-control.polyfillplaceholder.loginPassword</arg>
+<arg>Testing03!</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230731 11:03:46.727" endtime="20230731 11:03:46.727"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>css=button.btn.btn-primary.btn-lg.primary.login.m-btn</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230731 11:03:46.727" endtime="20230731 11:03:46.727"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>css=div.channel_item.bgimg-3</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230731 11:03:46.727" endtime="20230731 11:03:46.727"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=(//div[@class='text-left group inner list-group-item-text points'])[1]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230731 11:03:46.727" endtime="20230731 11:03:46.727"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=(//select[@class='form-control'])[1]/option[1]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230731 11:03:46.727" endtime="20230731 11:03:46.727"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=(//select[@class='form-control'])[2]/option[3]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230731 11:03:46.727" endtime="20230731 11:03:46.727"/>
+</kw>
+<status status="FAIL" starttime="20230731 11:03:31.031" endtime="20230731 11:03:46.727">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: A new session could not be created. Details: session not created: This version of ChromeDriver only supports Chrome version 113
+Current browser version is 115.0.5790.138 with package name com.android.chrome
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: A new session could not be created. Details: session not created: This version of ChromeDriver only supports Chrome version 113
+Current browser version is 115.0.5790.138 with package name com.android.chrome
+    at getResponseForW3CError (C:\Users\santhosh.kumar\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Users\santhosh.kumar\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:380:37)</status>
+</test>
+<status status="FAIL" starttime="20230731 11:03:30.487" endtime="20230731 11:03:46.727"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="chromeTest">chromeTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230731 11:03:46.713" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.11.1 on win32)" generated="20230706 12:34:58.346" rpa="false" schemaversion="3">
+<suite id="s1" name="sampleTest" source="C:\Users\santhosh.kumar\PycharmProjects\pythonProject1\Tests\sampleTest.robot">
+<test id="s1-t1" name="Dictionary Test" line="25">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${alphabets.a}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 12:34:58.571" endtime="20230706 12:34:58.571"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${alphabets.b}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 12:34:58.571" endtime="20230706 12:34:58.571"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${alphabets}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 12:34:58.571" endtime="20230706 12:34:58.571"/>
+</kw>
+<kw name="Dictionary Should Contain Key" library="Collections">
+<arg>${alphabets}</arg>
+<arg>a</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" starttime="20230706 12:34:58.571" endtime="20230706 12:34:58.571"/>
+</kw>
+<kw name="Dictionary Should Contain Value" library="Collections">
+<arg>${alphabets}</arg>
+<arg>apple</arg>
+<doc>Fails if ``value`` is not found from ``dictionary``.</doc>
+<status status="PASS" starttime="20230706 12:34:58.571" endtime="20230706 12:34:58.571"/>
+</kw>
+<for flavor="IN">
+<var>${key}</var>
+<var>${value}</var>
+<value>&amp;{alphabets}</value>
+<iter>
+<var name="${key}">a</var>
+<var name="${value}">apple</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${key} - ${value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 12:34:58.571" endtime="20230706 12:34:58.571"/>
+</kw>
+<status status="PASS" starttime="20230706 12:34:58.571" endtime="20230706 12:34:58.571"/>
+</iter>
+<iter>
+<var name="${key}">b</var>
+<var name="${value}">ball</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${key} - ${value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 12:34:58.571" endtime="20230706 12:34:58.587"/>
+</kw>
+<status status="PASS" starttime="20230706 12:34:58.571" endtime="20230706 12:34:58.587"/>
+</iter>
+<status status="PASS" starttime="20230706 12:34:58.571" endtime="20230706 12:34:58.587"/>
+</for>
+<for flavor="IN">
+<var>${key}</var>
+<value>@{alphabets.keys()}</value>
+<iter>
+<var name="${key}">a</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Key - ${key}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 12:34:58.587" endtime="20230706 12:34:58.587"/>
+</kw>
+<status status="PASS" starttime="20230706 12:34:58.587" endtime="20230706 12:34:58.587"/>
+</iter>
+<iter>
+<var name="${key}">b</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Key - ${key}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 12:34:58.587" endtime="20230706 12:34:58.587"/>
+</kw>
+<status status="PASS" starttime="20230706 12:34:58.587" endtime="20230706 12:34:58.587"/>
+</iter>
+<status status="PASS" starttime="20230706 12:34:58.587" endtime="20230706 12:34:58.587"/>
+</for>
+<for flavor="IN">
+<var>${value}</var>
+<value>@{alphabets.values()}</value>
+<iter>
+<var name="${value}">apple</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>value - ${value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 12:34:58.587" endtime="20230706 12:34:58.587"/>
+</kw>
+<status status="PASS" starttime="20230706 12:34:58.587" endtime="20230706 12:34:58.587"/>
+</iter>
+<iter>
+<var name="${value}">ball</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>value - ${value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 12:34:58.587" endtime="20230706 12:34:58.592"/>
+</kw>
+<status status="PASS" starttime="20230706 12:34:58.587" endtime="20230706 12:34:58.592"/>
+</iter>
+<status status="PASS" starttime="20230706 12:34:58.587" endtime="20230706 12:34:58.592"/>
+</for>
+<for flavor="IN">
+<var>${key}</var>
+<value>@{alphabets.keys()}</value>
+<iter>
+<var name="${key}">a</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${alphabets["${key}"]}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 12:34:58.592" endtime="20230706 12:34:58.592"/>
+</kw>
+<status status="PASS" starttime="20230706 12:34:58.592" endtime="20230706 12:34:58.592"/>
+</iter>
+<iter>
+<var name="${key}">b</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${alphabets["${key}"]}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230706 12:34:58.592" endtime="20230706 12:34:58.592"/>
+</kw>
+<status status="PASS" starttime="20230706 12:34:58.592" endtime="20230706 12:34:58.592"/>
+</iter>
+<status status="PASS" starttime="20230706 12:34:58.592" endtime="20230706 12:34:58.592"/>
+</for>
+<status status="PASS" starttime="20230706 12:34:58.571" endtime="20230706 12:34:58.592"/>
+</test>
+<status status="PASS" starttime="20230706 12:34:58.346" endtime="20230706 12:34:58.592"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="sampleTest">sampleTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

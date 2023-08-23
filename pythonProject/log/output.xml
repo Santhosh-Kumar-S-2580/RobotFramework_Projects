@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.11.1 on win32)" generated="20230620 16:35:00.452" rpa="false" schemaversion="3">
+<suite id="s1" name="Calculator RPA" source="C:\Users\santhosh.kumar\PycharmProjects\pythonProject\Calculator_RPA.robot">
+<test id="s1-t1" name="Do some calculations" line="21">
+<kw name="Windows Run" library="RPA.Windows" type="SETUP">
+<arg>Registration.jar</arg>
+<tag>window</tag>
+<doc>Use Windows run window to launch application.</doc>
+<msg timestamp="20230620 16:35:01.149" level="INFO">Sending keys '{Win}r' to element &lt;module 'uiautomation' from 'C:\\Users\\santhosh.kumar\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\uiautomation\\__init__.py'&gt;</msg>
+<msg timestamp="20230620 16:35:01.697" level="INFO">Sending keys 'Registration.jar' to element &lt;module 'uiautomation' from 'C:\\Users\\santhosh.kumar\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\uiautomation\\__init__.py'&gt;</msg>
+<msg timestamp="20230620 16:35:02.373" level="INFO">Sending keys '{Enter}' to element &lt;module 'uiautomation' from 'C:\\Users\\santhosh.kumar\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\uiautomation\\__init__.py'&gt;</msg>
+<status status="PASS" starttime="20230620 16:35:01.149" endtime="20230620 16:35:05.895"/>
+</kw>
+<kw name="Control Window" library="RPA.Windows">
+<arg>name:Registration Form</arg>
+<tag>window</tag>
+<doc>Controls the window defined by the locator.</doc>
+<msg timestamp="20230620 16:35:06.160" level="INFO">Getting element with locator: name:Registration Form and type:WindowControl</msg>
+<msg timestamp="20230620 16:35:06.160" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.PaneControl object at 0x00000288FFD53E50&gt;, locator='name:Registration Form and type:WindowControl', name='Desktop 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg timestamp="20230620 16:35:06.160" level="INFO">Locator 'name:Registration Form and type:WindowControl' produced matcher: MatchObject(locators=[('Name', 'Registration', 0), ('Name', 'Form', 0), ('ControlType', 'WindowControl', 0)], _classes=set(), max_level=0)</msg>
+<msg timestamp="20230620 16:35:17.481" level="INFO">Getting element with locator: name:Registration Form and type:PaneControl</msg>
+<msg timestamp="20230620 16:35:17.481" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.PaneControl object at 0x00000288FFD53910&gt;, locator='name:Registration Form and type:PaneControl', name='Desktop 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg timestamp="20230620 16:35:17.481" level="INFO">Locator 'name:Registration Form and type:PaneControl' produced matcher: MatchObject(locators=[('Name', 'Registration', 0), ('Name', 'Form', 0), ('ControlType', 'PaneControl', 0)], _classes=set(), max_level=0)</msg>
+<msg timestamp="20230620 16:35:28.473" level="INFO">2023-06-20 16:35:17.477 locators.py[267] _get_control_from_params -&gt; Find Control Timeout(10s): {Name: 'Form', ControlType: WindowControl}
+2023-06-20 16:35:28.473 locators.py[267] _get_control_from_params -&gt; Find Control Timeout(10s): {Name: 'Form', ControlType: PaneControl}</msg>
+<msg timestamp="20230620 16:35:28.474" level="FAIL">WindowControlError: Could not locate window with locator: 'name:Registration Form' (timeout: 10)</msg>
+<status status="FAIL" starttime="20230620 16:35:05.895" endtime="20230620 16:35:28.509"/>
+</kw>
+<status status="FAIL" starttime="20230620 16:35:01.141" endtime="20230620 16:35:28.509">WindowControlError: Could not locate window with locator: 'name:Registration Form' (timeout: 10)</status>
+</test>
+<status status="FAIL" starttime="20230620 16:35:00.455" endtime="20230620 16:35:28.509"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Calculator RPA">Calculator RPA</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

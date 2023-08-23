@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.11.1 on win32)" generated="20230821 16:48:44.920" rpa="true" schemaversion="3">
+<suite id="s1" name="Browser" source="C:\Users\santhosh.kumar\PycharmProjects\pythonProject\Browser.robot">
+<test id="s1-t1" name="Set Values In Notepad" line="8">
+<kw name="Windows Run" library="RPA.Windows" type="SETUP">
+<arg>msedge.exe</arg>
+<tag>window</tag>
+<doc>Use Windows run window to launch application.</doc>
+<msg timestamp="20230821 16:48:45.808" level="INFO">Sending keys '{Win}r' to element &lt;module 'uiautomation' from 'C:\\Users\\santhosh.kumar\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\uiautomation\\__init__.py'&gt;</msg>
+<msg timestamp="20230821 16:48:46.363" level="INFO">Sending keys 'msedge.exe' to element &lt;module 'uiautomation' from 'C:\\Users\\santhosh.kumar\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\uiautomation\\__init__.py'&gt;</msg>
+<msg timestamp="20230821 16:48:46.974" level="INFO">Sending keys '{Enter}' to element &lt;module 'uiautomation' from 'C:\\Users\\santhosh.kumar\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\uiautomation\\__init__.py'&gt;</msg>
+<status status="PASS" starttime="20230821 16:48:45.808" endtime="20230821 16:48:50.503"/>
+</kw>
+<kw name="Control Window" library="RPA.Windows">
+<arg>type:WindowControl class:Chrome_WidgetWin_1</arg>
+<tag>window</tag>
+<doc>Controls the window defined by the locator.</doc>
+<msg timestamp="20230821 16:48:50.632" level="INFO">Getting element with locator: type:WindowControl class:Chrome_WidgetWin_1</msg>
+<msg timestamp="20230821 16:48:50.632" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.PaneControl object at 0x00000131C6B7CAD0&gt;, locator='type:WindowControl class:Chrome_WidgetWin_1', name='Desktop 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1920, top=0, bottom=1080, width=1920, height=1080, xcenter=960, ycenter=540)</msg>
+<msg timestamp="20230821 16:48:50.632" level="INFO">Locator 'type:WindowControl class:Chrome_WidgetWin_1' produced matcher: MatchObject(locators=[('ControlType', 'WindowControl', 0), ('ClassName', 'Chrome_WidgetWin_1', 0)], _classes={'chrome_widgetwin_1'}, max_level=0)</msg>
+<msg timestamp="20230821 16:48:50.718" level="INFO">Returning element: WindowsElement(item=&lt;uiautomation.uiautomation.WindowControl object at 0x00000131C7055310&gt;, locator='type:WindowControl class:Chrome_WidgetWin_1', name='Sign in to your account - Profile 1 - Microsoft\u200b Edge', automation_id='', control_type='WindowControl', class_name='Chrome_WidgetWin_1', left=-11, right=1931, top=-11, bottom=1091, width=1942, height=1102, xcenter=960, ycenter=540)</msg>
+<status status="PASS" starttime="20230821 16:48:50.507" endtime="20230821 16:48:51.224"/>
+</kw>
+<kw name="Send Keys" library="RPA.Windows">
+<arg>keys={BROWSER_SEARCH}https://www.google.com/{ENTER}</arg>
+<tag>action</tag>
+<tag>keyboard</tag>
+<doc>Send keys to desktop, current window or to Control element
+defined by given locator.</doc>
+<msg timestamp="20230821 16:48:51.228" level="INFO">Sending keys '{BROWSER_SEARCH}https://www.google.com/{ENTER}' to element &lt;module 'uiautomation' from 'C:\\Users\\santhosh.kumar\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\uiautomation\\__init__.py'&gt;</msg>
+<status status="PASS" starttime="20230821 16:48:51.224" endtime="20230821 16:48:52.031"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link:Google</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230821 16:48:52.032" level="INFO">Clicking link 'link:Google'.</msg>
+<msg timestamp="20230821 16:48:52.032" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230821 16:48:52.033" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230821 16:48:52.031" endtime="20230821 16:48:52.039"/>
+</kw>
+<status status="FAIL" starttime="20230821 16:48:45.808" endtime="20230821 16:48:52.040">No browser is open.</status>
+</test>
+<status status="FAIL" starttime="20230821 16:48:44.928" endtime="20230821 16:48:52.042"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Browser">Browser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
